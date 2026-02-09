@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hunt</title>
+    <meta name="description" content="Book Hunt - tu tienda favorita para descubrir historias extraordinarias">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo-text">Book Hunt</a>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#books">Libros</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <!-- Using the uploaded filename. If broken in preview, alt text displays. -->
+                <img src="images/Book Hunt Logo.png" alt="Book Hunt Logo" class="hero-logo">
+                <h1>Tu Nueva Gran Aventura Te Espera</h1>
+                <p>Descubre una colección curada de libros únicos, bestsellers y clásicos de toda la vida. The hunt is over.</p>
+                <a href="https://wa.me/+584143662218" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Connect on WhatsApp">Compra Ahora</a>
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section id="books" class="books-section">
+            <div class="container">
+                <h2 class="section-title">Colecciones</h2>
+                <div class="books-grid">
+                    
+                    <!-- Book Card 1 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1660145160l/61718053.jpg" alt="Cover of Happy Place" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Happy Place</h3>
+                            <p class="book-author">by Emily Henry</p>
+                            <div class="book-price">
+                                <span>€24</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Happy+Place+de+Emily+Henry" target="_blank"><button class="add-to-cart" aria-label="Add Happy Place to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 2 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1691777485i/194802722.jpg" alt="Cover of Funny Story" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Funny Story</h3>
+                            <p class="book-author">by Emily Henry</p>
+                            <div class="book-price">
+                                <span>€25</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Funny+Story+de+Emily+Henry" target="_blank"><button class="add-to-cart" aria-label="Add Funny Story to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 3 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://prodimage.images-bn.com/pimages/9780593641194_p0_v5_s1200x630.jpg" alt="Cover of First-Time Caller" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">First-Time Caller</h3>
+                            <p class="book-author">by B.K. Borison</p>
+                            <div class="book-price">
+                                <span>€26</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+First-Time+Caller+de+B.K.+Borison" target="_blank"><button class="add-to-cart" aria-label="Add First-Time Caller to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 4 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://images2.penguinrandomhouse.com/cover/9780593739440" alt="Cover of Meet Me at the Lake" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Meet Me at the Lake</h3>
+                            <p class="book-author">by Carley Fortune</p>
+                            <div class="book-price">
+                                <span>€24</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Meet+Me+at+the+Lake+de+Carley+Fortune" target="_blank"><button class="add-to-cart" aria-label="Add Meet Me at the Lake to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 5 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/I/71GopwIzr0L._AC_UF1000,1000_QL80_.jpg" alt="Cover of Better Than The Movies" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Better Than The Movies</h3>
+                            <p class="book-author">by Lynn Painter</p>
+                            <div class="book-price">
+                                <span>€20</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Better+Than+The+Movies+de+Lynn+Painter" target="_blank"><button class="add-to-cart" aria-label="Add Better Than The Movies to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 6 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1707242121i/207293948.jpg" alt="Cover of Nothing Like the Movies" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Nothing Like The Movies</h3>
+                            <p class="book-author">by Lynn Painter</p>
+                            <div class="book-price">
+                                <span>€25</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Nothing+Like+The+Movies+de+Lynn+Painter" target="_blank"><button class="add-to-cart" aria-label="Add Nothing Like The Movies to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 7 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1634649284l/58684524.jpg" alt="Cover of Part of Your World" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Part of Your World</h3>
+                            <p class="book-author">by Abby Jimenez</p>
+                            <div class="book-price">
+                                <span>€24</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Part+of+Your+World+de+Abby+Jimenez" target="_blank"><button class="add-to-cart" aria-label="Add Part of Your World to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 8 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1751917536i/61918816.jpg" alt="Cover of Yours Truly" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Yours Truly</h3>
+                            <p class="book-author">by Abby Jimenez</p>
+                            <div class="book-price">
+                                <span>€19</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Yours+Truly+de+Abby+Jimenez" target="_blank"><button class="add-to-cart" aria-label="Add Yours Truly to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 9 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1742475239i/195820807.jpg" alt="Cover of Just for The Summer" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Just for The Summer</h3>
+                            <p class="book-author">by Abby Jimenez</p>
+                            <div class="book-price">
+                                <span>€24</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Just+for+The+Summer+de+Abby+Jimenez" target="_blank"><button class="add-to-cart" aria-label="Add Just for The Summer to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 10 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://booksflea.com/wp-content/uploads/2025/05/61fNLcCttKL._SL1200_.jpg" alt="Cover of La Hipótesis del Amor" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">La Hipótesis del Amor</h3>
+                            <p class="book-author">by Ali Hazelwood</p>
+                            <div class="book-price">
+                                <span>€26</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+La+Hipótesis+del+Amor+de+Ali+Hazelwood" target="_blank"><button class="add-to-cart" aria-label="Add La Hipótesis del Amor to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 11 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/I/61HnZUUmwnL._AC_UF1000,1000_QL80_.jpg" alt="Cover of La Química del Amor" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">La Química del Amor</h3>
+                            <p class="book-author">by Emily Henry</p>
+                            <div class="book-price">
+                                <span>€26</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+La+Química+del+Amor+de+Ali+Hazelwood" target="_blank"><button class="add-to-cart" aria-label="Add La Química del Amor to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 12 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://laestanteriadelcaos.com/wp-content/uploads/2023/10/61fxwr2lil._ac_uf10001000_ql80_.jpg" alt="Cover of La Teoría del Amor" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">La Teoría del Amor</h3>
+                            <p class="book-author">by Ali Hazelwood</p>
+                            <div class="book-price">
+                                <span>€26</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+La+Teoría+del+Amor+de+Ali+Hazelwood" target="_blank"><button class="add-to-cart" aria-label="Add La Teoría del Amor to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 13 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/I/71IWAXP06kL._AC_UF1000,1000_QL80_.jpg" alt="Cover of Verity" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Verity</h3>
+                            <p class="book-author">by Colleen Hoover</p>
+                            <div class="book-price">
+                                <span>€26</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Verity+de+Colleen+Hoover" target="_blank"><button class="add-to-cart" aria-label="Add Verity to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 14 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/0/01/The_Housemaid_Freida_McFadden_book_cover.jpg" alt="Cover of The Housemaid" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">The Housemaid</h3>
+                            <p class="book-author">by Freida McFadden</p>
+                            <div class="book-price">
+                                <span>€26</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Housemaid+de+Freida+McFadden" target="_blank"><button class="add-to-cart" aria-label="Add The Housemaid to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="social-links">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/+584143662218" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Connect on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/bookhuntccs?igsh=MWRiNXJucDI1aHU5eA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@bookhuntccs" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow on TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Book Hunt. All rights reserved. <br> Caracas, Venezuela.</p>
+        </div>
+    </footer>
+
+    <!-- Minimal JavaScript for Mobile Menu -->
+    <script src="script.js"></script>
+</body>
+</html>
