@@ -12,8 +12,556 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
-     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --color-primary-bg: #c1ff72;
+            --color-secondary: #470d8f;
+            --color-secondary-hover: #360a6e;
+            --color-text-dark: #1a0536; /* Very dark purple for high contrast text */
+            --color-text-light: #ffffff;
+            --color-card-bg: #ffffff;
+
+            --font-heading: "Playfair Display", serif;
+            --font-body: "Inter", sans-serif;
+
+            --spacing-container: 1200px;
+            --spacing-section: 4rem;
+            --border-radius: 12px;
+            --shadow-card:
+                0 4px 6px -1px rgba(71, 13, 143, 0.1),
+                0 2px 4px -1px rgba(71, 13, 143, 0.06);
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-primary-bg);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Utilities --- */
+        .container {
+            width: 90%;
+            max-width: var(--spacing-container);
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all var(--transition-speed) ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1.125rem;
+        }
+
+        .btn-primary {
+            background-color: var(--color-secondary);
+            color: var(--color-text-light);
+            box-shadow: 0 4px 15px rgba(71, 13, 143, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-secondary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(71, 13, 143, 0.4);
+            color: var(--color-text-light);
+        }
+
+        .btn-primary:focus-visible {
+            outline: 3px solid var(--color-text-dark);
+            outline-offset: 2px;
+        }
+
+        /* --- Header --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(71, 13, 143, 0.1);
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-text-dark);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color var(--transition-speed);
+        }
+
+        nav a:hover {
+            color: var(--color-secondary);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            cursor: pointer;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 8rem 0 4rem;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-logo {
+            max-width: 60%;
+            height: auto;
+            margin-top: -8rem;
+            margin-bottom: -5rem;
+            filter: drop-shadow(0 10px 15px rgba(71, 13, 143, 0.2));
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Books Section --- */
+        .books-section {
+            padding: var(--spacing-section) 0;
+            background-color: rgba(255,255,255,0.5); 
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* --- Search Bar Styles --- */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            border-radius: 50px;
+            border: 2px solid rgba(71, 13, 143, 0.2);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--color-text-dark);
+            outline: none;
+            transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+            background-color: var(--color-card-bg);
+        }
+
+        .search-input:focus {
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 10px rgba(71, 13, 143, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.2rem;
+            color: var(--color-secondary);
+            font-size: 1.1rem;
+        }
+
+        .no-matches-msg {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--color-secondary);
+            width: 100%;
+            padding: 2rem;
+            font-style: italic;
+        }
+
+        .books-grid {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .book-card {
+            background: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 280px;
+            cursor: pointer; /* Indicate it's clickable */
+            position: relative;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(71, 13, 143, 0.15);
+        }
+
+        .book-image-container {
+            width: 100%;
+            height: 300px;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .book-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .book-card:hover .book-image {
+            transform: scale(1.05);
+        }
+
+        .book-details {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .book-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-secondary);
+        }
+
+        .book-author {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .book-price {
+            margin-top: auto;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--color-text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .add-to-cart {
+            background: none;
+            border: 2px solid var(--color-secondary);
+            color: var(--color-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            z-index: 2; /* Ensure it stays clickable over the card */
+        }
+
+        .add-to-cart:hover {
+            background: var(--color-secondary);
+            color: white;
+        }
+
+        /* --- Modal Styles --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(26, 5, 54, 0.6); /* var(--color-text-dark) with opacity */
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition-speed) ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background-color: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transform: translateY(20px) scale(0.95);
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0) scale(1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: var(--color-secondary);
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.2s;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.1);
+        }
+
+        .modal-body {
+            display: flex;
+            padding: 2.5rem;
+            gap: 2.5rem;
+        }
+
+        .modal-image-container {
+            flex: 0 0 35%;
+        }
+
+        .modal-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .modal-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-secondary);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-author {
+            font-size: 1.1rem;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-tags {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: var(--color-primary-bg);
+            color: var(--color-secondary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-synopsis {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-text-dark);
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .modal-price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(71, 13, 143, 0.1);
+        }
+
+        .modal-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--color-secondary);
+            color: var(--color-text-light);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .social-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--color-text-light);
+            font-size: 1.5rem;
+            transition: all var(--transition-speed);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background-color: var(--color-primary-bg);
+            color: var(--color-secondary);
+            transform: scale(1.1);
+        }
+
+        .footer-copy {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 2rem;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { margin-top: 2.5rem; font-size: 1rem; }
+            
+            .menu-toggle {
+                display: block;
+                margin-right: -12rem; /* Adjusted based on original logic */
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active { display: flex; }
+            .hero-logo { margin-top: -2rem; margin-bottom: 0; }
+            .books-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+
+            .modal-body {
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .modal-image-container {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            .modal-title { font-size: 1.5rem; }
+            .modal-price-row { flex-direction: column; gap: 1rem; align-items: stretch; text-align: center; }
+        }
+    </style>
 </head>
 <body>
 
@@ -39,8 +587,7 @@
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="container hero-content">
-                <!-- Using the uploaded filename. If broken in preview, alt text displays. -->
-                <img src="images/Book Hunt Logo.png" alt="Book Hunt Logo" class="hero-logo">
+                <img src="images/Book Hunt Logo.png" alt="Book Hunt Logo" class="hero-logo" onerror="this.style.display='none'">
                 <h1>Caza Tu Nueva Gran Aventura</h1>
                 <p>Descubre una colección curada de libros únicos, bestsellers y clásicos de toda la vida. The hunt is over.</p>
                 <a href="https://wa.me/+584143662218" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Connect on WhatsApp">Compra Ahora</a>
@@ -51,8 +598,20 @@
         <section id="books" class="books-section">
             <div class="container">
                 <h2 class="section-title">Colecciones</h2>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" class="search-input" placeholder="Buscar por título...">
+                </div>
+
                 <div class="books-grid">
                     
+                    <!-- No matches message -->
+                    <div id="no-matches-msg" class="no-matches-msg" style="display: none;">
+                        No se encontraron libros con ese título.
+                    </div>
+
                     <!-- Book Card 1 -->
                     <article class="book-card">
                         <div class="book-image-container">
@@ -799,7 +1358,179 @@
         </div>
     </footer>
 
-    <!-- Minimal JavaScript for Mobile Menu -->
-    <script src="script.js"></script>
+    <!-- Book Details Modal -->
+    <div id="book-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Book Cover">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title" class="modal-title">Book Title</h2>
+                    <p id="modal-author" class="modal-author">by Author Name</p>
+                    
+                    <div class="modal-tags">
+                        <span id="modal-format" class="tag">Paperback</span>
+                        <span id="modal-category" class="tag">Romance</span>
+                        <span id="modal-language" class="tag">English</span>
+                    </div>
+
+                    <p id="modal-synopsis" class="modal-synopsis">Synopsis placeholder text.</p>
+                    
+                    <div class="modal-price-row">
+                        <span id="modal-price" class="modal-price">€0.00</span>
+                        <a id="modal-cart-btn" href="#" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mobile Navigation Toggle
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navList = document.querySelector("nav ul");
+
+            if (menuToggle && navList) {
+                menuToggle.addEventListener("click", () => {
+                    navList.classList.toggle("active");
+                });
+            }
+
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach((link) => {
+                link.addEventListener("click", () => {
+                    if (navList.classList.contains("active")) {
+                        navList.classList.remove("active");
+                    }
+                });
+            });
+
+            // --- Book Details Modal Logic ---
+            const modal = document.getElementById("book-modal");
+            const closeBtn = document.querySelector(".close-modal");
+            const bookCards = document.querySelectorAll(".book-card");
+
+            // --- Search Bar Logic ---
+            const searchInput = document.getElementById("search-input");
+            const noMatchesMsg = document.getElementById("no-matches-msg");
+            
+            if (searchInput) {
+                searchInput.addEventListener("input", (e) => {
+                    const term = e.target.value.toLowerCase();
+                    let visibleCount = 0;
+
+                    bookCards.forEach(card => {
+                        const title = card.querySelector(".book-title").textContent.toLowerCase();
+                        if (title.includes(term)) {
+                            card.style.display = "flex"; // Reset to default display
+                            visibleCount++;
+                        } else {
+                            card.style.display = "none"; // Hide non-matching
+                        }
+                    });
+
+                    // Show or hide the "No matches" message
+                    if (visibleCount === 0) {
+                        noMatchesMsg.style.display = "block";
+                    } else {
+                        noMatchesMsg.style.display = "none";
+                    }
+                });
+            }
+
+            // Simple helper to generate fake categories/synopsis based on what we see in the title
+            const generateBookDetails = (title) => {
+                let category = "Romance";
+                if (title.includes("Court") || title.includes("Glass") || title.includes("Fire") || title.includes("Percy") || title.includes("Wing") || title.includes("Flame") || title.includes("Hunger") || title.includes("Mockingjay")) {
+                    category = "Fantasía";
+                } else if (title.includes("Housemaid") || title.includes("Verity")) {
+                    category = "Thriller";
+                }
+
+                let language = "English";
+                if (title.includes("La ") || title.includes("Alas de") || title.includes("Amor") || title.includes("Verity")) {
+                    language = "Español";
+                }
+
+                // Randomly assign Paperback or Hardcover
+                const format = Math.random() > 0.4 ? "Paperback" : "Hardcover";
+
+                const synopsis = `Una historia cautivadora que te mantendrá al borde de tu asiento de principio a fin. "${title}" explora temas profundos que resonarán contigo mucho después de pasar la última página. Una edición imprescindible para los amantes de la buena lectura.`;
+
+                return { category, format, synopsis, language };
+            };
+
+            bookCards.forEach(card => {
+                card.addEventListener("click", (e) => {
+                    // Prevent opening the modal if the user directly clicked the Add to Cart button inside the card
+                    if(e.target.closest('a') || e.target.closest('button')) {
+                        return; 
+                    }
+
+                    // Extract data from the clicked card
+                    const title = card.querySelector(".book-title").textContent;
+                    const author = card.querySelector(".book-author").textContent;
+                    const price = card.querySelector(".book-price span").textContent;
+                    const imgSrc = card.querySelector(".book-image").src;
+                    const cartHref = card.querySelector(".book-price a").href;
+
+                    // Generate dynamic missing data
+                    const details = generateBookDetails(title);
+
+                    // Populate the modal
+                    document.getElementById("modal-title").textContent = title;
+                    document.getElementById("modal-author").textContent = author;
+                    document.getElementById("modal-price").textContent = price;
+                    document.getElementById("modal-img").src = imgSrc;
+                    document.getElementById("modal-cart-btn").href = cartHref;
+                    
+                    document.getElementById("modal-format").textContent = details.format;
+                    document.getElementById("modal-category").textContent = details.category;
+                    document.getElementById("modal-language").textContent = details.language;
+                    document.getElementById("modal-synopsis").textContent = details.synopsis;
+
+                    // If it is Sold out, disable the button slightly
+                    const cartBtn = document.getElementById("modal-cart-btn");
+                    if (price.toLowerCase().includes("sold out")) {
+                        cartBtn.style.opacity = "0.7";
+                        cartBtn.innerHTML = '<i class="fas fa-bell"></i> Avisar cuando esté disponible';
+                    } else {
+                        cartBtn.style.opacity = "1";
+                        cartBtn.innerHTML = '<i class="fas fa-cart-plus"></i> Añadir al Carrito';
+                    }
+
+                    // Show the modal
+                    modal.classList.add("active");
+                    document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+                });
+            });
+
+            // Close modal logic
+            const closeModal = () => {
+                modal.classList.remove("active");
+                document.body.style.overflow = "auto";
+            };
+
+            closeBtn.addEventListener("click", closeModal);
+
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && modal.classList.contains("active")) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
