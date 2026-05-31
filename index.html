@@ -310,6 +310,16 @@
             margin-bottom: 1rem;
             font-style: italic;
         }
+        
+        /* This hides the custom synopsis inside the card on the main grid */
+        .book-synopsis {
+            display: none; 
+        }
+
+        /* This hides the custom format inside the card on the main grid */
+        .book-format-data {
+            display: none; 
+        }
 
         .book-price {
             margin-top: auto;
@@ -475,52 +485,6 @@
             color: var(--color-secondary);
         }
 
-        /* --- Footer --- */
-        footer {
-            background-color: var(--color-secondary);
-            color: var(--color-text-light);
-            padding: 4rem 0 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .social-link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 3.5rem;
-            height: 3.5rem;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--color-text-light);
-            font-size: 1.5rem;
-            transition: all var(--transition-speed);
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            background-color: var(--color-primary-bg);
-            color: var(--color-secondary);
-            transform: scale(1.1);
-        }
-
-        .footer-copy {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-top: 2rem;
-        }
-
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
@@ -620,6 +584,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Happy Place</h3>
                             <p class="book-author">by Emily Henry</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una ex pareja, que rompió en secreto hace meses, debe fingir que sigue junta durante las vacaciones anuales con sus mejores amigos para no arruinar el último viaje del grupo.</div>
+                            
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€25</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Happy+Place+de+Emily+Henry" target="_blank"><button class="add-to-cart" aria-label="Add Happy Place to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -635,8 +605,14 @@
                         <div class="book-details">
                             <h3 class="book-title">Funny Story</h3>
                             <p class="book-author">by Emily Henry</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Dos personas con el corazón roto se convierten en compañeros de piso y fingen tener una relación después de que sus respectivas ex parejas los dejaran para casarse entre sí.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
-                                <span>€25</span>
+                                <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Funny+Story+de+Emily+Henry" target="_blank"><button class="add-to-cart" aria-label="Add Funny Story to cart"><i class="fas fa-cart-plus"></i></button></a>
                             </div>
                         </div>
@@ -650,6 +626,12 @@
                         <div class="book-details">
                             <h3 class="book-title">First-Time Caller</h3>
                             <p class="book-author">by B.K. Borison</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Aiden Valentine, el presentador de un programa de radio romántico en Baltimore, guarda el secreto de que ha dejado de creer en el amor. Todo cambia cuando una niña llama pidiendo consejos de citas para su madre, Lucie Stone, y la entrevista se vuelve viral, poniéndolos en el centro de atención. Mientras todo Baltimore escudriña su vida amorosa, Lucie comienza a cuestionar su propia felicidad y a abrirse a la idea de un poco más de romance. Cuando empiezan a saltar chispas detrás de escena, ella deberá decidir entre el final feliz patrocinado por la radio o el apuesto y temperamental hombre de los auriculares.</div>
+                            
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€26</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+First-Time+Caller+de+B.K.+Borison" target="_blank"><button class="add-to-cart" aria-label="Add First-Time Caller to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -665,6 +647,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Meet Me at the Lake</h3>
                             <p class="book-author">by Carley Fortune</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Dos extraños pasan un día mágico en Toronto e intercambian una promesa de reencuentro; diez años después, sus vidas chocan de nuevo en el resort de la familia de ella.</div>
+                            
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€24</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Meet+Me+at+the+Lake+de+Carley+Fortune" target="_blank"><button class="add-to-cart" aria-label="Add Meet Me at the Lake to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -680,6 +668,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Better Than The Movies</h3>
                             <p class="book-author">by Lynn Painter</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una romántica empedernida se alía con su molesto vecino de al lado para conseguir la atención de su amor platónico de la infancia, pero descubre que los clichés de las películas no siempre aplican a la vida real.</div>
+                            
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€20</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Better+Than+The+Movies+de+Lynn+Painter" target="_blank"><button class="add-to-cart" aria-label="Add Better Than The Movies to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -695,6 +689,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Nothing Like The Movies</h3>
                             <p class="book-author">by Lynn Painter</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">En la secuela universitaria, Wes y Liz intentan lidiar con el dolor, la distancia y la realidad adulta para ver si su amor épico puede sobrevivir.</div>
+                            
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€26</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Nothing+Like+The+Movies+de+Lynn+Painter" target="_blank"><button class="add-to-cart" aria-label="Add Nothing Like The Movies to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -710,6 +710,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Part of Your World</h3>
                             <p class="book-author">by Abby Jimenez</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una médica de urgencias de la ciudad y un carpintero de un pueblo pequeño se enamoran perdidamente, pero deben decidir si sus mundos, completamente opuestos, pueden unirse.</div>
+                            
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€24</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Part+of+Your+World+de+Abby+Jimenez" target="_blank"><button class="add-to-cart" aria-label="Add Part of Your World to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -725,6 +731,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Yours Truly</h3>
                             <p class="book-author">by Abby Jimenez</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una doctora con ansiedad clínica entabla una profunda conexión a través de cartas escritas a mano con un nuevo colega, quien resulta tener un regalo imposible de rechazar.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Yours+Truly+de+Abby+Jimenez" target="_blank"><button class="add-to-cart" aria-label="Add Yours Truly to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -740,6 +752,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Just for The Summer</h3>
                             <p class="book-author">by Abby Jimenez</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Dos personas "malditas" (cuyas ex parejas encuentran el amor de su vida justo después de terminar con ellos) deciden salir juntos durante el verano para romper el hechizo.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€24</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Just+for+The+Summer+de+Abby+Jimenez" target="_blank"><button class="add-to-cart" aria-label="Add Just for The Summer to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -755,6 +773,12 @@
                         <div class="book-details">
                             <h3 class="book-title">La Hipótesis del Amor</h3>
                             <p class="book-author">by Ali Hazelwood</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una estudiante de doctorado besa a un estricto profesor para convencer a su amiga de que tiene citas, desencadenando un falso romance que pronto se siente muy real.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback/Bolsillo</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+La+Hipótesis+del+Amor+de+Ali+Hazelwood" target="_blank"><button class="add-to-cart" aria-label="Add La Hipótesis del Amor to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -770,6 +794,12 @@
                         <div class="book-details">
                             <h3 class="book-title">La Química del Amor</h3>
                             <p class="book-author">by Emily Henry</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una neurocientífica se ve obligada a codirigir un prestigioso proyecto en la NASA junto al que fue su mayor némesis durante la escuela de posgrado.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback/Bolsillo</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+La+Química+del+Amor+de+Ali+Hazelwood" target="_blank"><button class="add-to-cart" aria-label="Add La Química del Amor to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -785,6 +815,12 @@
                         <div class="book-details">
                             <h3 class="book-title">La Teoría del Amor</h3>
                             <p class="book-author">by Ali Hazelwood</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una física teórica lleva una doble vida ofreciendo servicios como "novia falsa", hasta que el hermano mayor de uno de sus clientes resulta ser el físico experimental que podría arruinar su carrera.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback/Bolsillo</div>
+
                             <div class="book-price">
                                 <span>€26</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+La+Teoría+del+Amor+de+Ali+Hazelwood" target="_blank"><button class="add-to-cart" aria-label="Add La Teoría del Amor to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -800,6 +836,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Verity</h3>
                             <p class="book-author">by Colleen Hoover</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una escritora en apuros es contratada para terminar la saga de una exitosa autora en coma, pero descubre un manuscrito oculto lleno de confesiones aterradoras y siniestras.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€26</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Verity+de+Colleen+Hoover" target="_blank"><button class="add-to-cart" aria-label="Add Verity to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -815,6 +857,12 @@
                         <div class="book-details">
                             <h3 class="book-title">The Housemaid</h3>
                             <p class="book-author">by Freida McFadden</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una mujer con un pasado oscuro consigue trabajo como sirvienta para una familia adinerada, solo para descubrir que los secretos de sus empleadores son mucho más peligrosos que los suyos.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€26</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Housemaid+de+Freida+McFadden" target="_blank"><button class="add-to-cart" aria-label="Add The Housemaid to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -830,6 +878,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Throne Of Glass</h3>
                             <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una asesina letal a sueldo es sacada de su prisión en las minas de sal para competir en un torneo y convertirse en la campeona del rey que destruyó su país.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€26</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Throne+of+Glass+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add Throne Of Glass to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -845,6 +899,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Crown of Midnight</h3>
                             <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Ya como campeona del rey, Celaena debe ocultar sus verdaderas intenciones y su magia mientras descubre fuerzas oscuras que amenazan su mundo.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€25</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Crown+of+Midnight+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add Crown of Midnight to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -860,6 +920,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Heir of Fire</h3>
                             <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Celaena viaja a Wendlyn para enfrentarse a su herencia, dominar su magia de fuego y prepararse para la guerra inminente.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€25</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Heir+of+Fire+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add Heir of Fire to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -875,6 +941,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Queen of Shadows</h3>
                             <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Aelin Galathynius regresa a la capital, despojada de su magia, lista para cobrar venganza, rescatar a los suyos y reclamar su trono.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€25</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Queen+of+Shadows+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add Queen of Shadows to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -890,6 +962,12 @@
                         <div class="book-details">
                             <h3 class="book-title">A Court of Thorns and Roses</h3>
                             <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una cazadora humana es secuestrada y llevada a las peligrosas tierras mágicas de Prythian tras asesinar a un fae, enamorándose de su temible captor.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€28</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+A+Court+of+Thorns+and+Roses+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add A Court of Thorns and Roses to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -905,6 +983,12 @@
                         <div class="book-details">
                             <h3 class="book-title">A Court of Mist and Fury</h3>
                             <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Feyre lidia con un profundo trauma tras su estadía Bajo la Montaña, mientras forja un nuevo camino y un amor predestinado en la misteriosa Corte de la Noche.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€28</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+A+Court+of+Mist+and+Fury+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add A Court of Mist and Fury to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -920,6 +1004,12 @@
                         <div class="book-details">
                             <h3 class="book-title">A Court of Wings and Ruin</h3>
                             <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Feyre regresa a la Corte Primavera con objetivos ocultos, en una carrera contrarreloj para reunir a los Altos Lores y evitar que el rey de Hybern destruya ambos mundos.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€28</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+A+Court+of+Wings+and+Ruin+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add A Court of Wings and Ruin to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -935,6 +1025,12 @@
                         <div class="book-details">
                             <h3 class="book-title">A Court of Frost and Starlight</h3>
                             <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una novela centrada en la sanación y la reconstrucción durante la festividad del Solsticio de Invierno tras los estragos de la guerra.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€28</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+A+Court+of+Frost+and+Starlight+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add A Court of Frost and Starlight to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -950,6 +1046,12 @@
                         <div class="book-details">
                             <h3 class="book-title">A Court of Silver Flames</h3>
                             <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una historia que sigue el oscuro y difícil viaje de sanación de Nesta Archeron, su entrenamiento como guerrera y su ardiente romance con Cassian.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€25</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+A+Court+of+Silver+Flames+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add A Court of Silver Flames to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -960,11 +1062,38 @@
                     <!-- Book Card 24 -->
                     <article class="book-card">
                         <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/I/814MA2SBd4L._AC_UF1000,1000_QL80_.jpg" alt="Cover of ACOTAR Book Set" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">ACOTAR Book Set</h3>
+                            <p class="book-author">by Sarah J. Maas</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">La épica colección completa que abarca la transformación de Feyre de una simple humana a la Alta Lady de la Corte de la Noche.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
+                            <div class="book-price">
+                                <span>€137</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+ACOTAR+Book+Set+de+Sarah+J.+Mass" target="_blank"><button class="add-to-cart" aria-label="Add ACOTAR Book Set to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 25 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
                             <img src="https://prodimage.images-bn.com/pimages/9781546171867_p1_v2_s600x595.jpg" alt="Cover of The Hunger Games" class="book-image">
                         </div>
                         <div class="book-details">
                             <h3 class="book-title">The Hunger Games</h3>
                             <p class="book-author">by Suzanne Collins</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Katniss Everdeen se ofrece como tributo voluntario para salvar a su hermana y debe luchar a muerte en una arena televisada por el sádico Capitolio.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€27</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Hunger+Games+de+Suzanne+Collins" target="_blank"><button class="add-to-cart" aria-label="Add The Hunger Games to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -980,6 +1109,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Catching Fire</h3>
                             <p class="book-author">by Suzanne Collins</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Katniss y Peeta se ven obligados a regresar a la arena para el Vasallaje de los Veinticinco, encendiendo inadvertidamente la chispa de una rebelión general.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Catching+Fire+de+Suzanne+Collins" target="_blank"><button class="add-to-cart" aria-label="Add Catching Fire to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -995,6 +1130,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Mockingjay</h3>
                             <p class="book-author">by Suzanne Collins</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Katniss se convierte en el "Sinsajo", el símbolo y líder de una rebelión armada y brutal para derrocar al Capitolio de una vez por todas.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Mockingjay+de+Suzanne+Collins" target="_blank"><button class="add-to-cart" aria-label="Add Mockingjay to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1008,8 +1149,14 @@
                             <img src="https://prodimage.images-bn.com/pimages/9781546171898_p1_v2_s600x595.jpg" alt="Cover of The Ballad of Song Birds and Snakes" class="book-image">
                         </div>
                         <div class="book-details">
-                            <h3 class="book-title">The Ballad of Song Birds and Snakes</h3>
+                            <h3 class="book-title">The Ballad of Songbirds and Snakes</h3>
                             <p class="book-author">by Suzanne Collins</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">La precuela que explora la juventud del ambicioso Coriolanus Snow y su compleja relación con Lucy Gray Baird, la tributo del Distrito 12.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€24</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Ballad+of+Song+Birds+and+Snakes+de+Suzanne+Collins" target="_blank"><button class="add-to-cart" aria-label="Add The Ballad of Song Birds and Snakes to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1025,6 +1172,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Sunrise on the Reaping</h3>
                             <p class="book-author">by Suzanne Collins</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Ambientada 24 años antes de la saga de Katniss Everdeen, comienza en la mañana de la siega de los 50º Juegos del Hambre. Para el Segundo Vasallaje, el Capitolio duplica el número de tributos y Haymitch Abernathy resulta ser seleccionado.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Hardcover</div>
+
                             <div class="book-price">
                                 <span>€30</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Sunrise+on+the+Reaping+de+Suzanne+Collins" target="_blank"><button class="add-to-cart" aria-label="Add Sunrise on the Reaping to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1040,6 +1193,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Binding 13</h3>
                             <p class="book-author">by Chloe Walsh</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Un jugador de rugby estrella y una chica tímida que huye de un hogar abusivo forman un vínculo intenso y sanador en una escuela secundaria de Irlanda.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€32</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Binding+13+de+Chloe+Walsh" target="_blank"><button class="add-to-cart" aria-label="Add Binding 13 to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1055,6 +1214,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Keeping 13</h3>
                             <p class="book-author">by Chloe Walsh</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Johnny y Shannon deben enfrentarse a sus demonios personales, presiones familiares y amenazas externas para mantener viva su relación.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Keeping+13+de+Chloe+Walsh" target="_blank"><button class="add-to-cart" aria-label="Add Keeping 13 to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1070,6 +1235,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Saving 6</h3>
                             <p class="book-author">by Chloe Walsh</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Se centra en Joey (hermano mayor de Shannon) y su amiga Aoife, explorando una desgarradora historia de lealtad, trauma y adicción.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€32</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Saving+6+de+Chloe+Walsh" target="_blank"><button class="add-to-cart" aria-label="Add Saving 6 to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1085,6 +1256,12 @@
                         <div class="book-details">
                             <h3 class="book-title">The Bright Years</h3>
                             <p class="book-author">by Sarah Damoff</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Esta conmovedora saga sigue a una familia de Texas a través de cuatro generaciones marcadas por la tragedia y las sorpresas. El matrimonio de Ryan y Lillian Bright se desmorona frente a su hija Georgette debido a la adicción al alcohol que él oculta y a un hijo secreto que ella nunca reveló. Tras un duro golpe que separa a la familia, Georgette intenta alejarse de los recuerdos de sus padres, pero años después, la búsqueda del hijo biológico de Lillian la obliga a regresar a sus raíces. Narrada desde tres puntos de vista, la novela explora cómo Georgette debe desenterrar la historia familiar y decidir si puede volver a abrirse al amor, demostrando cómo la gracia puede restaurar a una familia rota.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Hardcover</div>
+
                             <div class="book-price">
                                 <span>€30</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Bright+Years+de+Sarah+Damoff" target="_blank"><button class="add-to-cart" aria-label="Add The Bright Years to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1100,6 +1277,12 @@
                         <div class="book-details">
                             <h3 class="book-title">The Lightning Thief (Percy Jackson and the Olympians, Book 1)</h3>
                             <p class="book-author">by Rick Riordan</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Un niño descubre que es el hijo de Poseidón y debe emprender una misión para recuperar el rayo maestro robado de Zeus y evitar una guerra divina.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€18</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Lightning+Thief+de+Rick+Riordan" target="_blank"><button class="add-to-cart" aria-label="Add The Lightning Thief to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1115,6 +1298,12 @@
                         <div class="book-details">
                             <h3 class="book-title">The Sea of Monsters (Percy Jackson and the Olympians, Book 2)</h3>
                             <p class="book-author">by Rick Riordan</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Percy y sus amigos deben navegar por las peligrosas aguas del Mar de los Monstruos para recuperar el mítico Vellocino de Oro y salvar el Campamento Mestizo.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€20</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Sea+of+Monsters+de+Rick+Riordan" target="_blank"><button class="add-to-cart" aria-label="Add The Sea of Monsters to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1130,6 +1319,12 @@
                         <div class="book-details">
                             <h3 class="book-title">As Long as the Lemon Trees Grow</h3>
                             <p class="book-author">by Zoulfa Katouh</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una estudiante de farmacia se enfrenta al trauma y la devastación de la revolución en Siria, debatiéndose entre huir para sobrevivir o quedarse a luchar por su país y el amor.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+As+Long+as+the+Lemon+Trees+Grow+de+Zoulfa+Katouh" target="_blank"><button class="add-to-cart" aria-label="Add As Long as the Lemon Trees Grow to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1145,6 +1340,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Powerless</h3>
                             <p class="book-author">by Lauren Roberts</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">En un reino donde los ordinarios son asesinados por la élite con poderes, una ladrona sin magia es obligada a competir en un torneo letal donde enamorarse del príncipe cazador podría costarle la vida.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Hardcover</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Powerless+de+Lauren+Roberts" target="_blank"><button class="add-to-cart" aria-label="Add Powerless to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1160,6 +1361,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Every Summer After</h3>
                             <p class="book-author">by Carley Fortune</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">A lo largo de seis veranos pasados y un fin de semana presente, dos amigos de la infancia intentan perdonar un error devastador y darse una segunda oportunidad en el amor.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€27</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Every+Summer+After+de+Carley+Fortune" target="_blank"><button class="add-to-cart" aria-label="Add Every Summer After to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1175,6 +1382,12 @@
                         <div class="book-details">
                             <h3 class="book-title">One Golden Summer</h3>
                             <p class="book-author">by Carley Fortune</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Alice, una fotógrafa que siempre ha preferido mantenerse al margen y dejar que otros brillen, organiza un viaje de verano a Barry's Bay junto a su abuela Nan luego de que esta se fracturara la cadera. Su tranquilidad en el lago se ve rápidamente interrumpida por la llegada de Charlie Florek, a quien Alice fotografió en una lancha amarilla cuando ella tenía apenas diecisiete años. Ahora convertido en un adulto coqueto, Charlie hace reír a Nan y despierta en Alice la nostalgia por la simplicidad de su juventud. A pesar de que los cálidos días con él son un bálsamo para su alma, Alice comienza a temer por su corazón; ella es experta en observar a las personas, pero nunca había conocido a alguien que realmente lograra verla a ella.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€25</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+One+Golden+Summer+de+Carley+Fortune" target="_blank"><button class="add-to-cart" aria-label="Add One Golden Summer to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1190,6 +1403,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Rewind it Back</h3>
                             <p class="book-author">by Liz Tomforde</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Seis años después de que se rompieran el corazón mutuamente, Hallie Hart se muda a Chicago para una pasantía en diseño de interiores. Sin embargo, sin saberlo, termina mudándose justo al lado de su primer amor de la adolescencia, el actual jugador de hockey Rio DeLuca. Para complicar las cosas, el proyecto de renovación que Hallie debe completar para asegurar el trabajo de sus sueños resulta ser la propia casa de Rio. Mientras ella intenta lidiar con su tensa historia compartida para poder trabajar, Rio ve cómo la única chica que ha querido vuelve a estar en su vida.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€29</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Rewing+it+Back+de+Liz+Tomforde" target="_blank"><button class="add-to-cart" aria-label="Add Rewind it Back to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1205,6 +1424,12 @@
                         <div class="book-details">
                             <h3 class="book-title">In Her Own League</h3>
                             <p class="book-author">by Liz Tomforde</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Como la primera mujer propietaria de un equipo en las Grandes Ligas de Béisbol, Reese Remington está más que calificada, pero enfrenta un constante escrutinio público y la presión de demostrar su valía en un mundo de hombres. Su mayor distracción es el tentador mánager del equipo, Emmett Montgomery, un exjugador estrella que al principio rechaza la idea de tener una nueva jefa que parece fría y enfocada estrictamente en los negocios. Sin embargo, al verse obligados a pasar largas horas juntos, Emmett descubre la pasión y determinación detrás del control de Reese, transformando sus constantes discusiones en una química ardiente e innegable. Aunque Reese sabe que lo más seguro para proteger al equipo y a su carrera es mantener la distancia, la atracción entre ambos se convierte en un juego que ninguno de los dos puede ganar.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€30</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+In+Her+Own+League+de+Liz+Tomforde" target="_blank"><button class="add-to-cart" aria-label="Add In Her Own League to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1218,8 +1443,14 @@
                             <img src="https://m.media-amazon.com/images/I/914dNZ+lLjL._AC_UF1000,1000_QL80_.jpg" alt="Cover of The Nigthingale" class="book-image">
                         </div>
                         <div class="book-details">
-                            <h3 class="book-title">The Nigthingale</h3>
+                            <h3 class="book-title">The Nightingale</h3>
                             <p class="book-author">by Kristin Hannah</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Sigue la historia de dos hermanas muy diferentes en Francia durante la Segunda Guerra Mundial, mostrando su resistencia, sacrificios y lucha por la supervivencia bajo la ocupación nazi.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€27</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Nigthingale+de+Kristin+Hannah" target="_blank"><button class="add-to-cart" aria-label="Add The Nigthingale to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1235,6 +1466,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Fourth Wing</h3>
                             <p class="book-author">by Rebecca Yarros</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Violet Sorrengail, frágil y destinada a los escribas, es forzada a sobrevivir al brutal y mortal entrenamiento para convertirse en jinete de dragones en el Colegio de Guerra Basgiath.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€32</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Fourth+Wing+de+Rebecca+Yarros" target="_blank"><button class="add-to-cart" aria-label="Add Fourth Wing to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1250,6 +1487,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Alas de Sangre</h3>
                             <p class="book-author">by Rebecca Yarros</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Violet Sorrengail, frágil y destinada a los escribas, es forzada a sobrevivir al brutal y mortal entrenamiento para convertirse en jinete de dragones en el Colegio de Guerra Basgiath.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€31</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Alas+de+Sangre+de+Rebecca+Yarros" target="_blank"><button class="add-to-cart" aria-label="Add Alas de Sangre to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1265,6 +1508,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Iron Flame</h3>
                             <p class="book-author">by Rebecca Yarros</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">En su segundo año, Violet debe enfrentar entrenamientos más crueles, su nueva conexión con la rebelión y secretos oscuros que podrían destruir su país.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€28</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Iron+Flame+de+Rebecca+Yarros" target="_blank"><button class="add-to-cart" aria-label="Add Iron Flame to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1280,6 +1529,12 @@
                         <div class="book-details">
                             <h3 class="book-title">The Seven Husbands of Evelyn Hugo</h3>
                             <p class="book-author">by Taylor Jenkins Reid</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Una legendaria y esquiva estrella de Hollywood decide contar finalmente la verdad sobre su glamurosa vida, sus siete matrimonios y su único, gran amor prohibido.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€24</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Seven+Husbands+of+Evely+Hugo+de+Taylor+Jenkins+Reid" target="_blank"><button class="add-to-cart" aria-label="Add The Seven Husbands of Evelyn Hugo to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1295,6 +1550,12 @@
                         <div class="book-details">
                             <h3 class="book-title">Heated Rivalry</h3>
                             <p class="book-author">by Rachel Reid</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Shane Hollander, el dedicado capitán de los Montreal Voyageurs, no permite que nada interfiera ni ponga en riesgo su carrera profesional. Su mayor desafío es Ilya Rozanov, el talentoso y arrogante capitán de los Boston Bears, quien es el autoproclamado "rey del hielo". Aunque ante el público se muestran como enemigos implacables (siendo Shane el único capaz de vencer a Ilya), en la intimidad no pueden evitar mantener una apasionada relación secreta. Cuando sus encuentros ocultos se vuelven difíciles de esconder de la prensa, se enfrentan a la cruda realidad de que la verdad podría arruinarlos a ambos, y pronto descubren que mantener el secreto ya no será una opción.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>€28</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+Heated+Rivalry+de+Rachel+Reid" target="_blank"><button class="add-to-cart" aria-label="Add Heated Rivalry to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1310,6 +1571,12 @@
                         <div class="book-details">
                             <h3 class="book-title">The Seven Year Slip</h3>
                             <p class="book-author">by Ashley Poston</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Tras vivir el peor día de su vida, Clementine idea un plan para proteger su frágil corazón y evitar acercarse demasiado a alguien. Sin embargo, su plan se desmorona cuando encuentra en la cocina del apartamento de su difunta tía a un hombre apuesto del que podría enamorarse perdidamente. El único problema es que él existe exactamente siete años en el pasado. En este apartamento, que su tía describía como un lugar donde los momentos se mezclan, Clementine deberá decidir si arriesgarse a caer en el amor. Al final, descubrirá que enamorarse no es una cuestión de tiempo, sino del momento adecuado.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Seven+Year+Slip+de+Ashley+Poston" target="_blank"><button class="add-to-cart" aria-label="Add The Seven Year Slip to cart"><i class="fas fa-cart-plus"></i></button></a>
@@ -1325,9 +1592,78 @@
                         <div class="book-details">
                             <h3 class="book-title">The Deal</h3>
                             <p class="book-author">by Elle Kennedy</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Hannah Wells, buscando llamar la atención de la persona que le gusta, acepta dar tutorías al capitán del equipo de hockey, Garrett Graham, a cambio de una cita falsa. Garrett, cuyas bajas calificaciones amenazan su sueño de jugar hockey profesional tras graduarse, acepta el trato de ayudar a la joven a poner celoso a otro chico para asegurar su posición. Sin embargo, tras un beso inesperado que lleva a un encuentro apasionado, Garrett se da cuenta de que fingir no será suficiente y deberá convencer a Hannah de que él es el hombre que ella realmente desea.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
                             <div class="book-price">
                                 <span>Sold Out</span>
                                 <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Deal+de+Elle+Kennedy" target="_blank"><button class="add-to-cart" aria-label="Add The Deal to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 49 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/I/81msNGGRLpL._UF1000,1000_QL80_.jpg" alt="Cover of The Mistake" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">The Mistake</h3>
+                            <p class="book-author">by Elle Kennedy</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">John Logan, una estrella del hockey universitario, oculta su creciente desesperación por el futuro detrás de su encanto y una vida de fiestas y conquistas. Un encuentro íntimo con la estudiante de primer año Grace Ivers se convierte en la distracción que necesita, pero un error la aleja. En su último año, Logan está decidido a demostrarle que merece una segunda oportunidad, pero Grace ha regresado más sabia y no está dispuesta a ceder fácilmente; esta vez, ella tiene el control y planea volverlo loco.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
+                            <div class="book-price">
+                                <span>Próximamente</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Mistake+de+Elle+Kennedy" target="_blank"><button class="add-to-cart" aria-label="Add The Mistake to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 50 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/I/81kOq0Ao7nL._AC_UF1000,1000_QL80_.jpg" alt="Cover of The Score" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">The Score</h3>
+                            <p class="book-author">by Elle Kennedy</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Allie Hayes se enfrenta a una crisis por su inminente graduación y una dolorosa ruptura, lo que la lleva a tener un salvaje encuentro de una noche con el irresistible jugador de hockey, Dean Di Laurentis. Aunque Allie decide que ese encuentro será único y solo quiere que sean amigos, Dean, un conocido mujeriego acostumbrado a conseguir a la chica que quiere, decide perseguirla sin descanso. Ante cambios drásticos en su vida, Dean comienza a plantearse si es momento de dejar las conquistas fugaces para apostar por el amor.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
+                            <div class="book-price">
+                                <span>Próximamente</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Score+de+Elle+Kennedy" target="_blank"><button class="add-to-cart" aria-label="Add The Score to cart"><i class="fas fa-cart-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 51 -->
+                    <article class="book-card">
+                        <div class="book-image-container">
+                            <img src="https://m.media-amazon.com/images/I/7127t3LvMuL._UF1000,1000_QL80_.jpg" alt="Cover of The Goal" class="book-image">
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">The Goal</h3>
+                            <p class="book-author">by Elle Kennedy</p>
+                            <!-- EDITAR SINOPSIS AQUÍ -->
+                            <div class="book-synopsis">Sabrina James tiene su futuro meticulosamente planeado hacia la escuela de derecho y un trabajo bien remunerado, por lo que solo está dispuesta a darle una noche de pasión al jugador de hockey John Tucker. Sin embargo, esa única noche lo cambia todo cuando se enfrentan a un embarazo a los veintidós años. Tucker, negándose a quedarse en el banquillo en su rol como padre, deberá lidiar con la terquedad de Sabrina y convencerla de que abra su corazón para que puedan alcanzar juntos sus metas.</div>
+
+                            <!-- EDITAR FORMATO AQUÍ -->
+                            <div class="book-format-data">Paperback</div>
+
+                            <div class="book-price">
+                                <span>Próximamente</span>
+                                <a href="https://wa.me/+584143662218?text=Hola+me+interesa+comprar+The+Goal+de+Elle+Kennedy" target="_blank"><button class="add-to-cart" aria-label="Add The Goal to cart"><i class="fas fa-cart-plus"></i></button></a>
                             </div>
                         </div>
                     </article>
@@ -1376,7 +1712,8 @@
                         <span id="modal-language" class="tag">English</span>
                     </div>
 
-                    <p id="modal-synopsis" class="modal-synopsis">Synopsis placeholder text.</p>
+                    <!-- Cambiado de <p> a <div> para permitir mútiples párrafos en la sinopsis -->
+                    <div id="modal-synopsis" class="modal-synopsis">Synopsis placeholder text.</div>
                     
                     <div class="modal-price-row">
                         <span id="modal-price" class="modal-price">€0.00</span>
@@ -1444,26 +1781,25 @@
                 });
             }
 
-            // Simple helper to generate fake categories/synopsis based on what we see in the title
+            // Simple helper to generate fake categories based on what we see in the title
             const generateBookDetails = (title) => {
                 let category = "Romance";
-                if (title.includes("Court") || title.includes("Glass") || title.includes("Fire") || title.includes("Percy") || title.includes("Wing") || title.includes("Flame") || title.includes("Hunger") || title.includes("Mockingjay")) {
+                if (title.includes("Court") || title.includes("ACOTAR") || title.includes("Glass") || title.includes("Heir") || title.includes("Percy") || title.includes("Wing") || title.includes("Flame")  || title.includes("Crown") || title.includes("Queen")) {
                     category = "Fantasía";
                 } else if (title.includes("Housemaid") || title.includes("Verity")) {
                     category = "Thriller";
+                } else if (title.includes("Bright") || title.includes("Nightingale")) {
+                    category = "Historical Fiction";
+                } else if (title.includes("Hunger") || title.includes("Catching") || title.includes("Mockingjay") || title.includes("Snakes") || title.includes("Reaping")) {
+                    category = "Distopía";
                 }
 
                 let language = "English";
-                if (title.includes("La ") || title.includes("Alas de") || title.includes("Amor") || title.includes("Verity")) {
+                if (title.includes("La ") || title.includes("Alas de") || title.includes("Amor") || title.includes("Verity") || title.includes("13") || title.includes("Saving")) {
                     language = "Español";
                 }
 
-                // Randomly assign Paperback or Hardcover
-                const format = Math.random() > 0.4 ? "Paperback" : "Hardcover";
-
-                const synopsis = `Una historia cautivadora que te mantendrá al borde de tu asiento de principio a fin. "${title}" explora temas profundos que resonarán contigo mucho después de pasar la última página. Una edición imprescindible para los amantes de la buena lectura.`;
-
-                return { category, format, synopsis, language };
+                return { category, language };
             };
 
             bookCards.forEach(card => {
@@ -1480,7 +1816,15 @@
                     const imgSrc = card.querySelector(".book-image").src;
                     const cartHref = card.querySelector(".book-price a").href;
 
-                    // Generate dynamic missing data
+                    // NUEVO: Extraer la sinopsis personalizada del HTML de la tarjeta
+                    const synopsisNode = card.querySelector(".book-synopsis");
+                    const customSynopsis = synopsisNode ? synopsisNode.innerHTML : "Sinopsis no disponible.";
+
+                    // NUEVO: Extraer el formato personalizado del HTML de la tarjeta
+                    const formatNode = card.querySelector(".book-format-data");
+                    const customFormat = formatNode ? formatNode.textContent.trim() : "Paperback";
+
+                    // Generate dynamic missing data (tags)
                     const details = generateBookDetails(title);
 
                     // Populate the modal
@@ -1490,10 +1834,12 @@
                     document.getElementById("modal-img").src = imgSrc;
                     document.getElementById("modal-cart-btn").href = cartHref;
                     
-                    document.getElementById("modal-format").textContent = details.format;
+                    document.getElementById("modal-format").textContent = customFormat;
                     document.getElementById("modal-category").textContent = details.category;
                     document.getElementById("modal-language").textContent = details.language;
-                    document.getElementById("modal-synopsis").textContent = details.synopsis;
+                    
+                    // NUEVO: Insertar la sinopsis personalizada
+                    document.getElementById("modal-synopsis").innerHTML = customSynopsis;
 
                     // If it is Sold out, disable the button slightly
                     const cartBtn = document.getElementById("modal-cart-btn");
